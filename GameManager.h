@@ -3,8 +3,5 @@
 
 class Gamemanager
 {
-	while (
-	{
-
-	}
+	
 };

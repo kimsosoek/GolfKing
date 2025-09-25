@@ -23,6 +23,10 @@
 		void Clear();
 
 
+		//이름이 일치하는 첫번째 아이템을 찾아 인벤토리에서 삭제하는 기능
+		void RemoveItem(const std::string& ItemName);
+
+
 	
 	};
 
