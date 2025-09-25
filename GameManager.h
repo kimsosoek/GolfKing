@@ -3,5 +3,8 @@
 
 class Gamemanager
 {
-	void StoryManager::PrintOpeningStory();
+	while (
+	{
+
+	}
 };

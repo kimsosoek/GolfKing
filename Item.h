@@ -7,7 +7,7 @@ class Item
 public:
 
 		// 생성자	
-		Item(const std::string& name); 
+		Item(const std::string& Name); 
 
 		// 가상 소멸자
 		virtual ~Item() = default; 
@@ -17,12 +17,8 @@ public:
 
 
 protected:
-
-
 		// 아이템 이름 자식 클래스에서 접근 가능	
-	   std::string m_name; 
+	   std::string m_Name; 
 	
-
-
 };
 

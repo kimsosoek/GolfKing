@@ -123,18 +123,23 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Club.cpp" />
     <ClCompile Include="GameManager.cpp" />
     <ClCompile Include="GolfKing.cpp" />
+    <ClCompile Include="Inventory.cpp" />
     <ClCompile Include="Item.cpp" />
     <ClCompile Include="Player.cpp" />
+    <ClCompile Include="Shoes.cpp" />
     <ClCompile Include="StoryManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Club.h" />
     <ClInclude Include="GameManager.h" />
     <ClInclude Include="Hole.h" />
+    <ClInclude Include="Inventory.h" />
     <ClInclude Include="Item.h" />
     <ClInclude Include="Player.h" />
+    <ClInclude Include="Shoes.h" />
     <ClInclude Include="StoryManager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

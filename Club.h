@@ -18,21 +18,21 @@
 public:
 
 	// 생성자
-	Club(const std::string& name, int baseDistance, int accuracy, ClubTier tier)
-		: Item(name), baseDistance(baseDistance), accuracy(accuracy), tier(tier)
+	Club(const std::string& Name, int Distance, int Accuracy, ClubTier Tier)
+		: Item(Name), BaseDistance(Distance), AccuracyModifier(Accuracy), Tier(Tier)
 	{
 		// 생성자 본문 (필요시 추가 초기화 작업 가능)
 	}
 	// 클럽이름
-	std::string name; 
+	std::string Name; 
 
 	// 기본파워
-	int baseDistance; 
+	int BaseDistance; 
 
 	// 정확도
-	int accuracy; 
+	int AccuracyModifier;
 
 	// 클럽등급
-	ClubTier tier; 
+	ClubTier Tier; 
 
 };
