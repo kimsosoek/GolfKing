@@ -41,7 +41,7 @@ void StoryManager::InitializeStories()
     m_PostHoleStories[8] = "드디어... 해냈어! 할아버지, 보고 계세요?";
 
 }
-// 특정 홀의 사전 이야기 출력
+// 특정 홀의 사전 이야기 출력!
 
 
 void StoryManager::PlayPreHoleStory(int holeIndex) 
