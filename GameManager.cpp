@@ -361,24 +361,21 @@ void GameManager::PlayRound()
 
         }
         // --- 홀 종료 ---
-   // (실제 퍼팅 로직에서 최종 타수를 확정해야 함)
+       // (실제 퍼팅 로직에서 최종 타수를 확정해야 함)
         printf("\n%d타로 홀아웃! (Par: %d)\n", StrokeCount, CurrentHole.Par);
         TotalScore += StrokeCount;
 
         if (StrokeCount <= CurrentHole.Par) {
             printf("Par 세이브 성공! 추가 보상을 확인합니다...\n");
-            if ((rand() % 100) < 20) { // 20% 확률로
+            if ((rand() % 100) < 40) { // 20% 확률로
                 printf("특별한 아이템을 발견했습니다!\n");
-                // (m_Player.AddItemToInventory(new Potion(...)); 같은 보상 지급 코드)
+               
             }
             m_StoryManager.PlayPostHoleStory(i);
         }
 
-        // --- 경기 종료 ---
-        printf("\n--- 경기 종료 ---\n");
-        printf("9홀 총 타수: %d\n", TotalScore);
-        m_Player.AddFatigue(60); // 경기 후 피로도 60 증가
-        if (i < Course_Hole_Count - 1) {
+        if (i < Course_Hole_Count - 1)
+        {
             printf("\n--- 어떻게 하시겠습니까? ---\n");
             printf("1. 다음 홀로 진행하기\n");
             printf("2. 메인 메뉴로 돌아가기 (훈련/휴식)\n");
@@ -390,6 +387,12 @@ void GameManager::PlayRound()
                 printf("경기를 중단하고 메인 메뉴로 돌아갑니다...\n");
                 break; // for 루프를 즉시 탈출합니다.
             }
+        }
+        // --- 경기 종료 ---
+        printf("\n--- 경기 종료 ---\n");
+        printf("9홀 총 타수: %d\n", TotalScore);
+        m_Player.AddFatigue(60); // 경기 후 피로도 60 증가
+
         // (보상 지급 로직 추가)
         printf("경기 결과에 따른 보상을 확인합니다...\n");
 
@@ -544,8 +547,9 @@ int GameManager::HandlePutting(int RemainingDistance, int GreenDifficulty) {
         int PlayerAim = 0;
         std::cin >> PlayerAim;
 
-        printf("\n파워 가이드:\n[  약함  |      컨트롤 구간 (5~25)      |  강함  ]\n[<<<<<<<<|====|>>>>>>>>>>]\n");
-        printf("파워 입력: ");
+        printf("\n                  파워 가이드\n");
+        printf("\n[  약함  |      컨트롤 구간 (5~25)      |  강함  ]\n[<<<<<|=============|>>>>>]\n");
+        printf("                     파워 입력\n ");
         std::string PowerInputString;
         std::cin >> PowerInputString;
         int PowerInputLength = PowerInputString.length();
