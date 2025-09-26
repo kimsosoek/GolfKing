@@ -65,3 +65,7 @@ void Inventory::RemoveItem(const std::string& ItemName)
 	}
 }
 
+const std::vector<Item*>& Inventory::GetItems()  {
+	return m_Items;
+}
+

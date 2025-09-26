@@ -22,12 +22,15 @@ struct Hole
 
 
 	// 홀의 특수성
-	int fairwayWidth;        // 페어웨이의 좌우 폭 (meter). 이 폭을 벗어나면 러프.
 
-	bool hasBunker;          // 이 홀에 벙커가 있는지 여부
+	int FairwayWidth;        // 페어웨이의 좌우 폭 (meter). 이 폭을 벗어나면 러프.
 
-	int bunkerDistance;      // 티샷 지점으로부터 벙커까지의 거리
+	bool HasBunker;          // 이 홀에 벙커가 있는지 여부
 
-	
+	int BunkerDistance;      // 티샷 지점으로부터 벙커까지의 거리
+
+	int BunkerRange;   //  벙커의 범위 ( 길이만 포함 그 범윟안에 들어갈 경우 확률적으로 벙커에 빠지게 됨)
+
+	int BunkerChance;   // 해당 구간에 공이 떨어졌을 때 벙커에 빠질 기본 확률
 };
 
