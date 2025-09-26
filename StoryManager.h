@@ -22,7 +22,9 @@ public:
 
 
 	void PrintOpeningStory(); // 오프닝 스토리를 출력
-	void PrintEndingStory(); // 오프닝 스토리를 출력
+
+	void PlayGoodEnding();
+	void PlayNormalEnding();
 
 
 };

@@ -24,7 +24,9 @@ void StoryManager::PrintOpeningStory()
 
 }
 
-void StoryManager::InitializeStories() 
+
+
+void StoryManager::InitializeStories()
 {
     // 1번 홀 스토리
     m_PreHoleStories[0] = "할아버지의 낡은 메모에는 이렇게 적혀있다. '첫 홀에서는 힘을 빼고 바람의 흐름을 느껴보렴...'";
@@ -37,9 +39,11 @@ void StoryManager::InitializeStories()
     // ... 이런 식으로 9번 홀까지의 모든 스토리를 여기에 중앙 관리합니다 ...
     m_PreHoleStories[8] = "마지막 홀. 할아버지의 꿈이 눈앞에 있다. 모든 것을 쏟아붓자!";
     m_PostHoleStories[8] = "드디어... 해냈어! 할아버지, 보고 계세요?";
-}
 
+}
 // 특정 홀의 사전 이야기 출력
+
+
 void StoryManager::PlayPreHoleStory(int holeIndex) 
 {
     printf("\n%s\n", m_PreHoleStories[holeIndex].c_str());
@@ -52,10 +56,6 @@ void StoryManager::PlayPostHoleStory(int holeIndex)
 }
 
 
-void StoryManager::PrintEndingStory()
-{
 
-
-}
 
 
